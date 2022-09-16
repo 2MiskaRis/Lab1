@@ -1,0 +1,58 @@
+#Калькуялтор
+
+import math
+L = int(input('Простые операции(+ - * /) - 1. log и возведение в степенть - 2. Округление до N знака - 3   '))
+if L==1:
+    a = int(input('Введите первое число:   '))
+    op1 = input('Выберите операцию:   +  -  *  /   ')
+    b = int(input('Введите второе число:   '))
+    if op1 == '+':
+        n = a + b
+    elif op1 == '-':
+        n = a - b
+    elif op1 == '*':
+        n = a * b
+    elif op1 == '/':
+        n = a / b
+    print('Ответ:',n)
+
+
+if L==2:
+    v = input(' Для возведения в степень нажмите  9 . Для подсчета логарифма напишите 0   ')
+    if v == '9':
+        osn = int(input('Нашишите основание степени:  '))
+        p = int(input('Напишите степень:  '))
+        print('Ответ:',osn**p)
+
+
+    if v == '0':
+        osn = int(input('Нашишите основание логарифма:  '))
+        p = int(input('Напишите число:  '))
+        print('Ответ:',math.log(p, osn))
+
+if L==3:
+    r = float(input('Введите число:  '))
+    k = int(input('N   '))
+    m = round(r, k)
+    print(m)
+    
+    
+    
+    #Фибоначчи
+    
+fib1 = fib2 = 1
+n = int(input())
+
+
+
+for i in range(0, n):
+    fib1, fib2 = fib2, fib1 + fib2
+    if n == fib2:
+        print(n, '- число фибоначчи, имеет порядковый номер',i+4)
+        break
+
+    if n<fib2:
+        print(n,'- не является числом фибоначчи')
+        break
+
+
